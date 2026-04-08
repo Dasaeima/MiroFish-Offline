@@ -5,7 +5,7 @@
       <div class="nav-brand" :style="s.navBrand">MIROFISH OFFLINE</div>
       <div class="nav-links" :style="s.navLinks">
         <a href="https://github.com/nikmcfly/MiroFish-Offline" target="_blank" class="github-link" :style="s.githubLink">
-          Visit our Github <span>↗</span>
+          Unser Github besuchen <span>↗</span>
         </a>
       </div>
     </nav>
@@ -15,21 +15,21 @@
       <section class="hero-section" :style="s.heroSection">
         <div class="hero-left" :style="s.heroLeft">
           <div class="tag-row" :style="s.tagRow">
-            <span class="orange-tag" :style="s.orangeTag">Offline Multi-Agent Simulation Engine</span>
-            <span class="version-text" :style="s.versionText">/ v0.1-preview</span>
+            <span class="orange-tag" :style="s.orangeTag">Offline Multi-Agenten-Simulationsmotor</span>
+            <span class="version-text" :style="s.versionText">/ v0.1-Vorschau</span>
           </div>
 
           <h1 class="main-title" :style="s.mainTitle">
-            Upload Any Document<br>
-            <span class="gradient-text" :style="s.gradientText">Predict What Happens Next</span>
+            Beliebiges Dokument hochladen<br>
+            <span class="gradient-text" :style="s.gradientText">Vorhersagen was als Nächstes passiert</span>
           </h1>
 
           <div class="hero-desc" :style="s.heroDesc">
             <p :style="s.heroDescP">
-              From a single document, <span :style="s.highlightBold">MiroFish Offline</span> extracts reality seeds and builds a parallel world of <span :style="s.highlightOrange">autonomous AI agents</span> — running entirely on your machine. Inject variables, observe emergent behavior, and find <span :style="s.highlightCode">"local optima"</span> in complex social dynamics.
+              Aus einem einzigen Dokument <span :style="s.highlightBold">MiroFish Offline</span> extrahiert Realitätssamen und baut eine Parallelwelt aus <span :style="s.highlightOrange">autonomen KI-Agenten</span> — die vollständig auf deinem Rechner läuft. Variablen injizieren, emergentes Verhalten beobachten und <span :style="s.highlightCode">"lokale Optima"</span> in komplexen sozialen Dynamiken finden.
             </p>
             <p class="slogan-text" :style="s.sloganText">
-              Your data never leaves your machine. The future is simulated locally<span :style="s.blinkingCursor">_</span>
+              Deine Daten verlassen nie deinen Rechner. Die Zukunft wird lokal simuliert<span :style="s.blinkingCursor">_</span>
             </p>
           </div>
 
@@ -44,33 +44,33 @@
         </div>
       </section>
 
-      <!-- Dashboard: Two-Column Layout -->
+      <!-- Dashboard: Zweispalten-Layout -->
       <section class="dashboard-section" :style="s.dashboardSection">
-        <!-- Left Column: Status & Steps -->
+        <!-- Linke Spalte: Status & Schritte -->
         <div class="left-panel" :style="s.leftPanel">
           <div class="panel-header" :style="s.panelHeader">
-            <span :style="s.statusDot">■</span> System Status
+            <span :style="s.statusDot">■</span> Systemstatus
           </div>
 
-          <h2 class="section-title" :style="s.sectionTitle">Ready</h2>
+          <h2 class="section-title" :style="s.sectionTitle">Bereit</h2>
           <p class="section-desc" :style="s.sectionDesc">
-            Local prediction engine on standby. Upload unstructured data to initialize a simulation.
+            Lokale Vorhersage-Engine auf Standby. Lade unstrukturierte Daten hoch, um eine Simulation zu starten.
           </p>
 
           <div class="metrics-row" :style="s.metricsRow">
             <div class="metric-card" :style="s.metricCard">
-              <div class="metric-value" :style="s.metricValue">Free</div>
-              <div class="metric-label" :style="s.metricLabel">Runs on your hardware</div>
+              <div class="metric-value" :style="s.metricValue">Kostenlos</div>
+              <div class="metric-label" :style="s.metricLabel">Läuft auf deiner Hardware</div>
             </div>
             <div class="metric-card" :style="s.metricCard">
-              <div class="metric-value" :style="s.metricValue">Private</div>
-              <div class="metric-label" :style="s.metricLabel">100% offline, no cloud</div>
+              <div class="metric-value" :style="s.metricValue">Privat</div>
+              <div class="metric-label" :style="s.metricLabel">100% offline, keine Cloud</div>
             </div>
           </div>
 
           <div class="steps-container" :style="s.stepsContainer">
             <div class="steps-header" :style="s.stepsHeader">
-               <span :style="s.diamondIcon">◇</span> Workflow Sequence
+               <span :style="s.diamondIcon">◇</span> Arbeitsablauf
             </div>
             <div :style="s.workflowList">
               <div v-for="(step, i) in steps" :key="i" :style="s.workflowItem">
@@ -84,13 +84,13 @@
           </div>
         </div>
 
-        <!-- Right Column: Interactive Console -->
+        <!-- Rechte Spalte: Interaktive Konsole -->
         <div class="right-panel" :style="s.rightPanel">
           <div class="console-box" :style="s.consoleBox">
             <div :style="s.consoleSection">
               <div class="console-header" :style="s.consoleHeader">
-                <span>01 / Reality Seeds</span>
-                <span>Supported: PDF, MD, TXT</span>
+                <span>01 / Realitätssamen</span>
+                <span>Unterstützt: PDF, MD, TXT</span>
               </div>
               <div
                 :style="s.uploadZone"
@@ -102,8 +102,8 @@
                 <input ref="fileInput" type="file" multiple accept=".pdf,.md,.txt" @change="handleFileSelect" style="display: none" :disabled="loading" />
                 <div v-if="files.length === 0" :style="s.uploadPlaceholder">
                   <div :style="s.uploadIcon">↑</div>
-                  <div :style="s.uploadTitle">Drag & drop files here</div>
-                  <div :style="s.uploadHint">or click to browse</div>
+                  <div :style="s.uploadTitle">Dateien hierher ziehen & ablegen</div>
+                  <div :style="s.uploadHint">oder klicken zum Durchsuchen</div>
                 </div>
                 <div v-else :style="s.fileList">
                   <div v-for="(file, index) in files" :key="index" :style="s.fileItem">
@@ -115,22 +115,22 @@
               </div>
             </div>
 
-            <div :style="s.consoleDivider"><span :style="s.consoleDividerText">Parameters</span></div>
+            <div :style="s.consoleDivider"><span :style="s.consoleDividerText">Parameter</span></div>
 
             <div :style="s.consoleSection">
               <div class="console-header" :style="s.consoleHeader">
-                <span>>_ 02 / Simulation Prompt</span>
+                <span>>_ 02 / Simulations-Prompt</span>
               </div>
               <div :style="s.inputWrapper">
-                <textarea v-model="formData.simulationRequirement" :style="s.codeInput" placeholder="// Describe your simulation or prediction goal in natural language" rows="6" :disabled="loading"></textarea>
-                <div :style="s.modelBadge">Engine: Ollama + Neo4j (local)</div>
+                <textarea v-model="formData.simulationRequirement" :style="s.codeInput" placeholder="// Beschreibe dein Simulations- oder Vorhersageziel in natürlicher Sprache" rows="6" :disabled="loading"></textarea>
+                <div :style="s.modelBadge">Motor: Ollama + Neo4j (lokal)</div>
               </div>
             </div>
 
             <div :style="s.btnSection">
               <button :style="s.startEngineBtn" @click="startSimulation" :disabled="!canSubmit || loading">
-                <span v-if="!loading">Start Engine</span>
-                <span v-else>Initializing...</span>
+                <span v-if="!loading">Motor starten</span>
+                <span v-else>Initialisierung...</span>
                 <span>→</span>
               </button>
             </div>
@@ -178,89 +178,124 @@ const s = reactive({
   scrollDownBtn: { width: '40px', height: '40px', border: '1px solid #E5E5E5', background: 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#FF4500', fontSize: '1.2rem' },
   dashboardSection: { display: 'flex', gap: '60px', borderTop: '1px solid #E5E5E5', paddingTop: '60px', alignItems: 'flex-start' },
   leftPanel: { flex: '0.8', display: 'flex', flexDirection: 'column' },
-  panelHeader: { fontFamily: mono, fontSize: '0.8rem', color: '#999', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' },
-  statusDot: { color: '#FF4500', fontSize: '0.8rem' },
-  sectionTitle: { fontSize: '2rem', fontWeight: '520', margin: '0 0 15px 0' },
-  sectionDesc: { color: '#666', marginBottom: '25px', lineHeight: '1.6' },
-  metricsRow: { display: 'flex', gap: '20px', marginBottom: '15px' },
-  metricCard: { border: '1px solid #E5E5E5', padding: '20px 30px', minWidth: '150px' },
-  metricValue: { fontFamily: mono, fontSize: '1.8rem', fontWeight: '520', marginBottom: '5px' },
-  metricLabel: { fontSize: '0.85rem', color: '#999' },
-  stepsContainer: { border: '1px solid #E5E5E5', padding: '30px', position: 'relative' },
-  stepsHeader: { fontFamily: mono, fontSize: '0.8rem', color: '#999', marginBottom: '25px', display: 'flex', alignItems: 'center', gap: '8px' },
-  diamondIcon: { fontSize: '1.2rem', lineHeight: '1' },
-  workflowList: { display: 'flex', flexDirection: 'column', gap: '20px' },
-  workflowItem: { display: 'flex', alignItems: 'flex-start', gap: '20px' },
-  stepNum: { fontFamily: mono, fontWeight: '700', color: '#000', opacity: '0.3' },
+  panelHeader: { fontFamily: mono, fontSize: '0.8rem', color: '#999', letterSpacing: '1px', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '8px' },
+  statusDot: { color: '#00FF00' },
+  sectionTitle: { fontSize: '2.5rem', fontWeight: '400', margin: '0 0 15px 0', letterSpacing: '-1px' },
+  sectionDesc: { fontSize: '0.95rem', color: '#666', lineHeight: '1.7', marginBottom: '40px' },
+  metricsRow: { display: 'flex', gap: '20px', marginBottom: '40px' },
+  metricCard: { flex: '1', padding: '20px', border: '1px solid #E5E5E5', background: '#FAFAFA' },
+  metricValue: { fontSize: '1.8rem', fontWeight: '700', marginBottom: '5px' },
+  metricLabel: { fontSize: '0.8rem', color: '#999', fontFamily: mono },
+  stepsContainer: { borderTop: '1px solid #E5E5E5', paddingTop: '30px' },
+  stepsHeader: { fontFamily: mono, fontSize: '0.8rem', color: '#999', letterSpacing: '1px', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '8px' },
+  diamondIcon: { color: '#FF4500' },
+  workflowList: { display: 'flex', flexDirection: 'column', gap: '15px' },
+  workflowItem: { display: 'flex', alignItems: 'flex-start', gap: '15px' },
+  stepNum: { fontFamily: mono, fontSize: '0.8rem', color: '#999', minWidth: '30px', paddingTop: '2px' },
   stepInfo: { flex: '1' },
-  stepTitle: { fontWeight: '520', fontSize: '1rem', marginBottom: '4px' },
-  stepDesc: { fontSize: '0.85rem', color: '#666' },
-  rightPanel: { flex: '1.2', display: 'flex', flexDirection: 'column' },
-  consoleBox: { border: '1px solid #CCC', padding: '8px' },
-  consoleSection: { padding: '20px' },
-  consoleHeader: { display: 'flex', justifyContent: 'space-between', marginBottom: '15px', fontFamily: mono, fontSize: '0.75rem', color: '#666' },
-  uploadZone: { border: '1px dashed #CCC', height: '200px', overflowY: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', background: '#FAFAFA' },
+  stepTitle: { fontSize: '0.95rem', fontWeight: '600', marginBottom: '3px' },
+  stepDesc: { fontSize: '0.85rem', color: '#999', fontFamily: mono },
+  rightPanel: { flex: '1.2' },
+  consoleBox: { border: '1px solid #E5E5E5', background: '#FAFAFA' },
+  consoleSection: { padding: '25px' },
+  consoleHeader: { fontFamily: mono, fontSize: '0.8rem', color: '#999', letterSpacing: '1px', marginBottom: '15px', display: 'flex', justifyContent: 'space-between' },
+  uploadZone: { border: '1px dashed #CCC', padding: '30px', cursor: 'pointer', minHeight: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'border-color 0.2s' },
   uploadPlaceholder: { textAlign: 'center' },
-  uploadIcon: { width: '40px', height: '40px', border: '1px solid #DDD', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 15px', color: '#999' },
-  uploadTitle: { fontWeight: '500', fontSize: '0.9rem', marginBottom: '5px' },
-  uploadHint: { fontFamily: mono, fontSize: '0.75rem', color: '#999' },
-  fileList: { width: '100%', padding: '15px', display: 'flex', flexDirection: 'column', gap: '10px' },
-  fileItem: { display: 'flex', alignItems: 'center', background: '#fff', padding: '8px 12px', border: '1px solid #EEE', fontFamily: mono, fontSize: '0.85rem' },
-  fileName: { flex: '1', margin: '0 10px' },
-  removeBtn: { background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.2rem', color: '#999' },
-  consoleDivider: { display: 'flex', alignItems: 'center', margin: '10px 0', borderTop: '1px solid #EEE' },
-  consoleDividerText: { padding: '0 15px', fontFamily: mono, fontSize: '0.7rem', color: '#BBB', letterSpacing: '1px' },
-  inputWrapper: { position: 'relative', border: '1px solid #DDD', background: '#FAFAFA' },
-  codeInput: { width: '100%', border: 'none', background: 'transparent', padding: '20px', fontFamily: mono, fontSize: '0.9rem', lineHeight: '1.6', resize: 'vertical', outline: 'none', minHeight: '150px' },
-  modelBadge: { position: 'absolute', bottom: '10px', right: '15px', fontFamily: mono, fontSize: '0.7rem', color: '#AAA' },
-  btnSection: { padding: '0 20px 20px' },
-  startEngineBtn: { width: '100%', background: '#000', color: '#fff', border: 'none', padding: '20px', fontFamily: mono, fontWeight: '700', fontSize: '1.1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', letterSpacing: '1px' },
+  uploadIcon: { fontSize: '2rem', color: '#CCC', marginBottom: '10px' },
+  uploadTitle: { fontSize: '0.9rem', color: '#666', marginBottom: '5px' },
+  uploadHint: { fontSize: '0.8rem', color: '#999', fontFamily: mono },
+  fileList: { width: '100%', display: 'flex', flexDirection: 'column', gap: '8px' },
+  fileItem: { display: 'flex', alignItems: 'center', gap: '10px', padding: '8px', background: '#fff', border: '1px solid #E5E5E5' },
+  fileName: { flex: '1', fontSize: '0.85rem', fontFamily: mono, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' },
+  removeBtn: { background: 'none', border: 'none', cursor: 'pointer', color: '#999', fontSize: '1.2rem', padding: '0 5px', lineHeight: '1' },
+  consoleDivider: { borderTop: '1px solid #E5E5E5', margin: '0', padding: '10px 25px', background: '#F5F5F5' },
+  consoleDividerText: { fontFamily: mono, fontSize: '0.75rem', color: '#999', letterSpacing: '1px' },
+  inputWrapper: { position: 'relative' },
+  codeInput: { width: '100%', background: '#fff', border: '1px solid #E5E5E5', padding: '15px', fontFamily: mono, fontSize: '0.85rem', color: '#333', resize: 'vertical', outline: 'none', lineHeight: '1.6' },
+  modelBadge: { position: 'absolute', bottom: '10px', right: '10px', fontFamily: mono, fontSize: '0.7rem', color: '#999', background: '#F5F5F5', padding: '3px 8px' },
+  btnSection: { padding: '20px 25px', borderTop: '1px solid #E5E5E5' },
+  startEngineBtn: { width: '100%', padding: '15px 30px', background: '#000', color: '#fff', border: 'none', cursor: 'pointer', fontFamily: mono, fontSize: '0.9rem', fontWeight: '700', letterSpacing: '1px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'background 0.2s' },
 })
-
-const steps = [
-  { num: '01', title: 'Graph Build', desc: 'Extract reality seeds from your document, build knowledge graph with Neo4j + GraphRAG' },
-  { num: '02', title: 'Env Setup', desc: 'Generate agent personas, configure simulation parameters via local Ollama LLM' },
-  { num: '03', title: 'Simulation', desc: 'Run multi-agent simulation locally with dynamic memory updates and emergent behavior' },
-  { num: '04', title: 'Report', desc: 'ReportAgent analyzes the simulation results and generates a detailed prediction report' },
-  { num: '05', title: 'Interaction', desc: 'Chat with any agent from the simulated world or discuss findings with ReportAgent' },
-]
 
 const router = useRouter()
-
-const formData = ref({ simulationRequirement: '' })
+const fileInput = ref(null)
 const files = ref([])
 const loading = ref(false)
-const error = ref('')
-const isDragOver = ref(false)
-const fileInput = ref(null)
+const formData = reactive({ simulationRequirement: '' })
 
-const canSubmit = computed(() => {
-  return formData.value.simulationRequirement.trim() !== '' && files.value.length > 0
-})
+const steps = [
+  { num: '01', title: 'Wissensgraph', desc: 'Dokumentenverarbeitung → Ontologie-Extraktion → Neo4j Wissensgraph' },
+  { num: '02', title: 'Umgebungs-Setup', desc: 'Agenten-Persona-Erzeugung + Simulationswelt-Konfiguration' },
+  { num: '03', title: 'Simulationslauf', desc: 'Multi-Agenten-Sozialdynamik-Simulation' },
+  { num: '04', title: 'Analysebericht', desc: 'KI-generierter Analysebericht' },
+  { num: '05', title: 'Tiefe Interaktion', desc: 'Chat mit Berichts-Agent, Interview mit virtuellen Personen' },
+]
 
-const triggerFileInput = () => { if (!loading.value) fileInput.value?.click() }
-const handleFileSelect = (event) => { addFiles(Array.from(event.target.files)) }
-const handleDragOver = (e) => { isDragOver.value = true }
-const handleDragLeave = (e) => { isDragOver.value = false }
-const handleDrop = (e) => { isDragOver.value = false; addFiles(Array.from(e.dataTransfer.files)) }
+const canSubmit = computed(() => files.value.length > 0 && formData.simulationRequirement.trim())
 
-const addFiles = (newFiles) => {
-  const allowed = ['.pdf', '.md', '.txt']
-  const valid = newFiles.filter(f => allowed.some(ext => f.name.toLowerCase().endsWith(ext)))
-  files.value = [...files.value, ...valid]
+function scrollToBottom() {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
 }
 
-const removeFile = (index) => { files.value.splice(index, 1) }
+function triggerFileInput() {
+  if (!loading.value) fileInput.value?.click()
+}
 
-const scrollToBottom = () => { window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }) }
+function handleDragOver(e) {
+  e.currentTarget.style.borderColor = '#FF4500'
+}
 
-const startSimulation = () => {
+function handleDragLeave(e) {
+  e.currentTarget.style.borderColor = '#CCC'
+}
+
+function handleDrop(e) {
+  e.currentTarget.style.borderColor = '#CCC'
+  const droppedFiles = Array.from(e.dataTransfer.files).filter(f =>
+    ['.pdf', '.md', '.txt'].some(ext => f.name.toLowerCase().endsWith(ext))
+  )
+  files.value = [...files.value, ...droppedFiles]
+}
+
+function handleFileSelect(e) {
+  const selected = Array.from(e.target.files)
+  files.value = [...files.value, ...selected]
+  e.target.value = ''
+}
+
+function removeFile(index) {
+  files.value.splice(index, 1)
+}
+
+async function startSimulation() {
   if (!canSubmit.value || loading.value) return
-  import('../store/pendingUpload.js').then(({ setPendingUpload }) => {
-    setPendingUpload(files.value, formData.value.simulationRequirement)
-    router.push({ name: 'Process', params: { projectId: 'new' } })
-  })
+  loading.value = true
+  try {
+    const formDataObj = new FormData()
+    files.value.forEach(file => formDataObj.append('files', file))
+    formDataObj.append('simulation_requirement', formData.simulationRequirement)
+
+    const response = await fetch('/api/projects/create', {
+      method: 'POST',
+      body: formDataObj,
+    })
+
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
+    const result = await response.json()
+
+    router.push({
+      name: 'process',
+      query: {
+        project_id: result.project_id,
+        graph_id: result.graph_id,
+        simulation_requirement: formData.simulationRequirement,
+      }
+    })
+  } catch (error) {
+    console.error('Fehler beim Starten der Simulation:', error)
+    alert(`Fehler: ${error.message}`)
+  } finally {
+    loading.value = false
+  }
 }
 </script>
-
-<!-- Styles loaded from Home.css via import -->
